@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(void){
+    int arr[5]={1,7};// remaining are assumed as zero or garbage value // hint 2 eventhough it has more elements , the pointer considered only default array index[0] first. until the iteration is used for all
+    int *p; 
+    p=arr; // here in arrays & strings we can use with or without (&) symbol 
+    int (*ptr)[5]; // (*ptr)[5]; one pointer pointing to 5 element address ,  without bracket *ptr[5]  (5 pointer for diff address) it does not work all the time// with bracket will work
+    ptr =arr;
+    printf("p=%d, ptr=%d\n",*p++,*p); // o/p = 1, 2     
+    printf("p=%d, ptr=%d\n",++*p,*p); //  o/p =2,2
+    printf("p=%p, ptr=%p\n",*p++,*p); // o/p will be in hexadecimal 16 0-9(9) 10-A, 11-B 15- f , 16-10 to 25- 19 (9 ) 26 -1A
+    *p++; // add int type to hexadecimal value only for zeroth element of array  (default int datatype byte=2) if 2 int numbers are bytes are added 2,2 means total 4 bytes
+    *ptr++; // add int type X no of variables eg 5 means 2 X5 = 10 bytes  (while comes for hexadecimal it counts for 32 bit compiler there int =4 bytes, char =2, float=8)
+    
+    
+}
