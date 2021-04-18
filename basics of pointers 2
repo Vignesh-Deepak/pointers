@@ -3,7 +3,7 @@ int main(void){
     int arr[5]={1,7};// remaining are assumed as zero or garbage value // hint 2 eventhough it has more elements , the pointer considered only default array index[0] first. until the iteration is used for all
     int *p; 
     p=arr; // here in arrays & strings we can use with or without (&) symbol 
-    int (*ptr)[5]; // (*ptr)[5]; one pointer pointing to 5 element address ,  without bracket *ptr[5]  (5 pointer for diff address) it does not work all the time// with bracket will work
+    int (*ptr)[5]; // (*ptr)[5]; one pointer pointing to 5 element address   (1 pointer for diff address)  ;  (5 pointer for each value address)it does not work all the time// with bracket will work
     ptr =arr;
     printf("p=%d, ptr=%d\n",*p++,*p); // o/p = 1, 2     
     printf("p=%d, ptr=%d\n",++*p,*p); //  o/p =2,2
@@ -13,3 +13,14 @@ int main(void){
     
     
 }
+
+eg                   arr[0]  arr[1] arr[2]  arr[3]  arr[4]
+ptr                    5       7      2      9       8
+80024               80024    80028  80032   80036  80040  
+ 
+ptr[0]= 80024  ,  *ptr[0]=5
+
+1. ptr does not contain any memory address ,it takes memory location of zeroth element(that its address) as its address
+2. here 8002x is a example we cannot see what memory address is used , it can be any order 
+3. in general -> one pointer  points to different memory location when incremented (similar to value incremented)  
+ 
