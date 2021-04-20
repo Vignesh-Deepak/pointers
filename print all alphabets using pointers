@@ -1,11 +1,12 @@
 int main()
 {
-  char str[27]'
+  char str[27]
   char *ptr;
   ptr= str;
   for(int i=0;i<26;i++)
   {
-     *ptr=str+i;
+     *ptr=str+i; // when comes for alphabet/string no need to get input in iteration .either with also no problem 
      ptr=i+'a';
      ptr++;
    }  
+  ptr=str;  // important line 
