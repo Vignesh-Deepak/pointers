@@ -1,0 +1,22 @@
+int calculate(char *str); fn definition
+int main()
+{
+ char str[25];
+ for(int i=0;i!='\0';i++)
+ {
+    scanf("%c", str+i); or gets("%s", str+i);
+  }
+  int length= calculate(str);
+  printf("%d",l);
+  
+ int calculate(char *str)
+ {
+    int count=0;
+    while(*str!='\0')
+    {
+       count++;
+       str++;
+      }
+    return count;
+   } 
+      
