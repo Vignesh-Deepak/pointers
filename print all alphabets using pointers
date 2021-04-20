@@ -5,11 +5,11 @@ int main()
   ptr= str; // important line before getting input for pointer both for array and strings
   for(int i=0;i<26;i++)
   {
-     *ptr=str+i; // when comes for alphabet/string no need to get input in iteration .either with also no problem 
-     ptr=i+'a';
+     *ptr=str+i; // when comes for alphabet/string no need to get input in iteration .either with also no problem because pointer is used 
+     ptr=i+'a'; // storing elements directly into the address of each string
      ptr++; // important 
    }  
-  ptr=str;  // important line after getting input for pointer both for array and strings
+  ptr=str;  // important line after getting input for pointer both for array and strings for again reassigning it from beginning index
   for(int i=0;i<26;i++)
   {
      printf("%c", *ptr);
