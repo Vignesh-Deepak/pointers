@@ -1,0 +1,69 @@
+// INCREMENT POINTER  METHOD
+ pointer say ptr pointing at arr[0]. Then you can easily apply pointer arithmetic to get reference of next array element. You can either use (ptr + 1) or ptr++ to point to arr[1]
+int main()
+{
+  int N;
+  scanf("%d",&N);
+  int arr[N];
+  int *ptr;
+  ptr=arr;
+  
+  for(int i=0;i<N;i++)
+  {
+    scanf("%d",ptr); // can also have &ptr(without also no matters)
+    ptr++;
+  }
+  ptr=arr;
+  for(int i=0;i<N;i++)
+  {
+     printf("%d",*ptr);  // Print value pointed by the pointer
+     ptr++;
+   }   
+ }   
+ 
+ OUTPUT OF BOTH 2 & 3 EXECUTES BUT CORE SEGMENTATION DUMP ERROR 
+ 2// POINTER ADDITION METHOD  (pointer notation (ptr+i)) 
+ 
+ int main()
+ {
+   int N;
+   scanf("%d",&N);
+   int arr[N];
+   int *ptr;
+   //ptr=arr;
+   for(int i=0;i<N;i++)
+  {
+    scanf("%d",(ptr+i));       // (ptr+i) equivalent to &ptr[i]
+    //ptr++;
+  }
+  //ptr=arr;
+  for(int i=0;i<N;i++)
+  {
+     printf("%d",*(ptr+i)); // *(ptr+i) equivalent to &ptr[i] // Print value pointed by the pointer
+     //ptr++;
+   }   
+ }  
+ 
+ (ptr + i) is equivalent to &ptr[i], similarly *(ptr + i) is equivalent to ptr[i]. Also you can use (i + ptr), i[ptr] all means the same
+ 3// ARRAY NOTATION METHOD
+ 
+  int main()
+ {
+   int N;
+   scanf("%d",&N);
+   int arr[N];
+   int *ptr;
+   //ptr=arr;
+   for(int i=0;i<N;i++)
+  {
+    scanf("%d",&ptr[i]);       // (ptr+i) equivalent to &ptr[i]
+    //ptr++;
+  }
+  //ptr=arr;
+  for(int i=0;i<N;i++)
+  {
+     printf("%d",ptr[i]); // *(ptr+i) equivalent to &ptr[i] // Print value pointed by the pointer
+     //ptr++;
+   }   
+ }  
+ 
